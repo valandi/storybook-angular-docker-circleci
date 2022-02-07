@@ -21,7 +21,7 @@ jobs:
            libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
            fonts-liberation libnss3 lsb-release xdg-utils wget
       - run:
-          name: Start all services declared in docker-compose.yml
+          name: Start storybook service declared in docker-compose.yml
           command: docker-compose up -d
       - run:
           name: Run Tests
@@ -29,7 +29,7 @@ jobs:
             export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
             echo $APPLITOOLS_BATCH_ID
             npm install
-            npx eyes-storybook -p localhost:8086
+            npx eyes-storybook -p 127.0.0.1:8086
   build-and-test2:
     executor:
       name: node/default
