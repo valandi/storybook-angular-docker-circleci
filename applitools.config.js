@@ -13,5 +13,6 @@ module.exports = {
   puppeteerOptions: {
     executablePath: '/usr/bin/chromium-browser',
     args: ['--no-sandbox'],
-  }
+  },
+  runInDocker: true
 }

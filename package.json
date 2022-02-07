@@ -1,6 +1,6 @@
 {
-  "name": "tutorial-storybook-angular",
-  "version": "0.0.0",
+  "name": "eyes-storybook-docker-circleci",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
