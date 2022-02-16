@@ -2,6 +2,6 @@ version: '3'
 services:
   storybook:
     build: .
-    container_name: storybook-server
+    container_name: "storybook-server"
     ports:
       - "8086:8086"
