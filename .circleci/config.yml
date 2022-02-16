@@ -11,6 +11,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+        version: 19.03.13
       - run:
          name: Install Headless Chrome Dependencies
          command: |
@@ -29,7 +30,7 @@ jobs:
             export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
             echo $APPLITOOLS_BATCH_ID
             npm install
-            npx eyes-storybook -h 127.0.0.1 -p 8086
+            npx eyes-storybook -h 127.0.0.0 -p 8086
   build-and-test2:
     executor:
       name: node/default
