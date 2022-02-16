@@ -28,6 +28,7 @@ jobs:
           command: | 
             export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
             echo $APPLITOOLS_BATCH_ID
+            npm install
             npx eyes-storybook
   build-and-test2:
     executor:
