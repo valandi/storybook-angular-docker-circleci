@@ -11,7 +11,7 @@ module.exports = {
     {width: 1024, height: 768, name: 'safari'}
   ],
   puppeteerOptions: {
-    executablePath: '/usr/bin/chromium-browser',
+    headless: true,
     args: ['--no-sandbox'],
   },
   runInDocker: true
